@@ -1,6 +1,12 @@
-alias ffoxnt='firefox --new-tab'
-alias ffoxs='firefox_search_alias(){firefox --new-tab "https://www.google.com/search?q=$1"};firefox_search_alias'
+alias ffoxs='firefox_search_alias(){firefox -search $1 & };firefox_search_alias'
+alias ffoxsp='firefox_search_p_alias(){firefox -search $1 &};firefox_search_p_alias'
+alias ffox='firefox_newtab_alias(){firefox $1 --new-tab & };firefox_newtab_alias'
+alias ffoxp='firefox_private_alias(){firefox $1 --private & };firefox_private_alias'
+alias ffoxpw='firefox_private_alias(){firefox --private-window & };firefox_private_alias'
 alias ffoxpref='firefox --preferences'
-alias ffoxwin='firefox --new-window'
+alias ffoxw='firefox --new-window'
 alias ffoxdev='firefox --devtools'
+
+#alias ffoxs='firefox_search_alias(){firefox --new-tab "https://www.google.com/search?q=$1" & };firefox_search_alias'
+#alias ffoxsp='firefox_search_p_alias(){firefox --new-tab "https://www.google.com/search?q=$1" &};firefox_search_p_alias'
 
