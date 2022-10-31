@@ -1,0 +1,1 @@
+alias penspawntty='echo " ctrl + z -->victim \n\n echo \$TERM && tput lines && tput cols -->attacker \n\n stty raw -echo \n fg -->for bash \n\n stty raw -echo; fg --> for zsh \n\n reset -->victim \n\n export SHELL=bash -->victim \n export TERM=xterm-256color -->victim \n stty rows <num> columns <cols> -->victim \n "'

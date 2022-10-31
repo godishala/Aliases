@@ -1,0 +1,6 @@
+alias ffoxnt='firefox --new-tab'
+alias ffoxs='firefox_search_alias(){firefox --new-tab "https://www.google.com/search?q=$1"};firefox_search_alias'
+alias ffoxpref='firefox --preferences'
+alias ffoxwin='firefox --new-window'
+alias ffoxdev='firefox --devtools'
+
