@@ -1,0 +1,40 @@
+######Adding path############
+
+$Include = "c:\Users\user\Documents\python\"	
+$OldPath=[System.Environment]::GetEnvironmentVariable('PATH','machine')
+
+
+$NEWPATH="$OldPath;$Include" ##dont forget `;` in the path if `;` is not present in `$include`
+
+## if `;` already exists in $include follow the below method
+
+$NEWPATH=$OldPath+$Include 
+
+[Environment]::SetEnvironmentVariable("PATH","$NEWPATH","Machine")
+
+(or)
+[System.Environment]::SetEnvironmentVariable("PATH","$NEWPATH","Machine")
+##############other method of adding path ##################
+
+$Environment=[System.Environment]:GetEnvironmentVariable('PATH','machine')
+$AddPathstring=";C:\Users\user\java"
+$Environment = $Environment.insert($Environment.length,$AddPathString)
+
+######Remove Path###########
+
+$Environment=[System.Environment]:GetEnvironmentVariable('PATH','machine')
+
+$Removepathstring="C:\Users\user\Documents\python"
+
+foreach ($path in ($Environment).split(;))
+    {	
+	if ($path -like $Removepathstring)
+		{ $Environment = $Environment.Replace($path,"")}
+	}
+
+######  Updating Path #############
+[System.Environment]::SetEnvironmentVariable("Path",$Environment,"machine")	
+[Environment]::SetEnvironmentVariable("Path",$Environment","machine") --> dont forget two : colons
+
+
+
